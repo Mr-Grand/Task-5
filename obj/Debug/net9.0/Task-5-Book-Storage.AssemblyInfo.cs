@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Task-5-Book-Storage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9125e14d115b759b4f20f1bafa321bb0aff719a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b61a0f3c6eda56343986efcd1266c704b3976581")]
 [assembly: System.Reflection.AssemblyProductAttribute("Task-5-Book-Storage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Task-5-Book-Storage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

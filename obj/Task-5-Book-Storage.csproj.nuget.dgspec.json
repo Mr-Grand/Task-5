@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\Homework OOP\\Homework OOP\\Task-5-Book-Storage\\Task-5-Book-Storage.csproj": {}
+    "C:\\Users\\user\\Desktop\\Task-5-Book-Storage\\Task-5-Book-Storage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\Homework OOP\\Homework OOP\\Task-5-Book-Storage\\Task-5-Book-Storage.csproj": {
+    "C:\\Users\\user\\Desktop\\Task-5-Book-Storage\\Task-5-Book-Storage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\Homework OOP\\Homework OOP\\Task-5-Book-Storage\\Task-5-Book-Storage.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Task-5-Book-Storage\\Task-5-Book-Storage.csproj",
         "projectName": "Task-5-Book-Storage",
-        "projectPath": "C:\\Users\\user\\Desktop\\Homework OOP\\Homework OOP\\Task-5-Book-Storage\\Task-5-Book-Storage.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\Task-5-Book-Storage\\Task-5-Book-Storage.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\Homework OOP\\Homework OOP\\Task-5-Book-Storage\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Task-5-Book-Storage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
