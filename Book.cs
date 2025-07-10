@@ -9,28 +9,28 @@ public class Book
 
     public string Name
     {
-        get { return _name; }
-        set { _name = value; }
+        get => _name;
+        set => _name = value;
     }
 
     public string Author
     {
-        get { return _author; }
-        set { _author = value; }
+        get => _author;
+        set => _author = value;
     }
 
     public int Year
     {
-        get { return _year; }
-        set { _year = value; }
+        get => _year;
+        set => _year = value;
     }
 
     public int UniqueCode
     {
-        get { return _uniqueCode; }
-        set { _uniqueCode = value; }
+        get => _uniqueCode;
+        set => _uniqueCode = value;
     }
-        
+
 
     public Book(string name, string author, int year, int uniqueCode)
     {
@@ -39,5 +39,4 @@ public class Book
         _year = year;
         _uniqueCode = uniqueCode;
     }
-        
 }

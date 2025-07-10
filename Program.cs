@@ -1,20 +1,20 @@
 ﻿namespace Task_5;
 
-class Program
+internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         BookShelter bookShelter = new();
         Random random = new();
-        
-        Book book1 = new("World", "God", 0,1);
-        Book book2 = new("War and War", "People", 10,1);
-        Book book3 = new("Famous world food", "Noname cook", 2022,3);
-        Book book4 = new("Famous world food", "Noname cook", 2020,4);
-        Book book5 = new("World and War", "Lev Tolstoy", 1867,5);
-        Book book6 = new("World and War 2", "Lev Tolstoy", 1867,6);
-        Book book7 = new("World and War 3", "Lev Tolstoy", 1869,7);
-        
+
+        Book book1 = new("World", "God", 0, 1);
+        Book book2 = new("War and War", "People", 10, 1);
+        Book book3 = new("Famous world food", "Noname cook", 2022, 3);
+        Book book4 = new("Famous world food", "Noname cook", 2020, 4);
+        Book book5 = new("World and War", "Lev Tolstoy", 1867, 5);
+        Book book6 = new("World and War 2", "Lev Tolstoy", 1867, 6);
+        Book book7 = new("World and War 3", "Lev Tolstoy", 1869, 7);
+
         // Создаем начальную библиотеку
         bookShelter.AddBook(book1);
         bookShelter.AddBook(book2);
@@ -23,7 +23,7 @@ class Program
         bookShelter.AddBook(book5);
         bookShelter.AddBook(book6);
         bookShelter.AddBook(book7);
-        
+
         bool IfContinue = true;
         do
         {
@@ -35,12 +35,10 @@ class Program
                               "\n3) Убрать книгу" +
                               "\n4) Найти книгу" +
                               "\nSpacebar) Закончить работу");
-            
             Console.WriteLine();
 
-            var choice = Console.ReadKey().Key;
+            ConsoleKey choice = Console.ReadKey().Key;
             if (choice != ConsoleKey.Spacebar)
-            {
                 switch (choice)
                 {
                     case ConsoleKey.D1:
@@ -72,7 +70,7 @@ class Program
                                           "\n3) По году" +
                                           "\n4) По уникальному коду" +
                                           "\nSpacebar) Вернуться назад");
-                        var choiseD3 = Console.ReadKey().Key;
+                        ConsoleKey choiseD3 = Console.ReadKey().Key;
                         switch (choiseD3)
                         {
                             case ConsoleKey.D1:
@@ -115,6 +113,7 @@ class Program
                                 Console.Clear();
                                 break;
                         }
+
                         break;
                     case ConsoleKey.D4:
                         Console.Clear();
@@ -125,7 +124,7 @@ class Program
                                           "\n3) По году" +
                                           "\n4) По уникальному коду" +
                                           "\nSpacebar) Вернуться назад");
-                        var choiseD4 = Console.ReadKey().Key;
+                        ConsoleKey choiseD4 = Console.ReadKey().Key;
                         switch (choiseD4)
                         {
                             case ConsoleKey.D1:
@@ -168,6 +167,7 @@ class Program
                                 Console.Clear();
                                 break;
                         }
+
                         break;
                     case ConsoleKey.D5:
                         break;
@@ -177,8 +177,7 @@ class Program
                     default:
                         break;
                 }
-            }
             else break;
-        }while(IfContinue);
+        } while (IfContinue);
     }
 }
