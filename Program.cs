@@ -167,9 +167,6 @@ internal class Program
                                 Console.Clear();
                                 break;
                         }
-
-                        break;
-                    case ConsoleKey.D5:
                         break;
                     case ConsoleKey.Spacebar:
                         IfContinue = false;
