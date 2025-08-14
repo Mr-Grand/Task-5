@@ -41,11 +41,11 @@ public class BookShelter
         Console.WriteLine($"\n** " + new string('-', 25) + " **");
     }
 
-    public void DeleteBook(Predicate<Book> condition, string criteria)
+    public void DeleteBook(Predicate<Book> condition, string conditionDescription)
     {
         if (FindBook(condition).Count != 0)
             foreach (Book book in FindBook(condition))
                 _books.Remove(book);
-        else Console.WriteLine($"Ничего не найдено по условию - {criteria}");
+        else Console.WriteLine($"Ничего не найдено по условию - {conditionDescription}");
     }
 }
