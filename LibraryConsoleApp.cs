@@ -46,7 +46,7 @@ public class LibraryConsoleApp
                         switch (choiseD3)
                         {
                             case ConsoleKey.D1:
-                                DeleteBookByNameMenu();
+                                DeleteBookByTitleMenu();
                                 break;
                             case ConsoleKey.D2:
                                 DeleteBookByAuthorMenu();
@@ -76,7 +76,7 @@ public class LibraryConsoleApp
                         switch (choiseD4)
                         {
                             case ConsoleKey.D1:
-                                FindBookByNameMenu();
+                                FindBookByTitleMenu();
                                 break;
                             case ConsoleKey.D2:
                                 FindBookByAuthorMenu();
@@ -127,12 +127,13 @@ public class LibraryConsoleApp
         Console.Clear();
     }
 
-    private void DeleteBookByNameMenu()
+    private void DeleteBookByTitleMenu()
     {
         Console.Clear();
         Console.Write("Введите имя: ");
         string inputString = Console.ReadLine();
-        _bookShelter.DeleteBook(b => b.Name == inputString, "имя");
+        IBookSearchCondition condition = new BookByTitle(inputString);
+        _bookShelter.DeleteBook(condition);
         Console.WriteLine("Нажмите любую кнопку, чтобы вернуться в главное меню");
         Console.ReadKey();
         Console.Clear();
@@ -143,7 +144,8 @@ public class LibraryConsoleApp
         Console.Clear();
         Console.Write("Введите автора: ");
         string inputString = Console.ReadLine();
-        _bookShelter.DeleteBook(b => b.Author == inputString, "автор");
+        IBookSearchCondition condition = new BookByAuthor(inputString);
+        _bookShelter.DeleteBook(condition);
         Console.WriteLine("Нажмите любую кнопку, чтобы вернуться в главное меню");
         Console.ReadKey();
         Console.Clear();
@@ -154,7 +156,8 @@ public class LibraryConsoleApp
         Console.Clear();
         Console.Write("Введите год: ");
         int inputInt = Convert.ToInt32(Console.ReadLine());
-        _bookShelter.DeleteBook(b => b.Year == inputInt, "год");
+        IBookSearchCondition condition = new BookByYear(inputInt);
+        _bookShelter.DeleteBook(condition);
         Console.WriteLine("Нажмите любую кнопку, чтобы вернуться в главное меню");
         Console.ReadKey();
         Console.Clear();
@@ -165,18 +168,20 @@ public class LibraryConsoleApp
         Console.Clear();
         Console.Write("Введите код: ");
         int inputInt = Convert.ToInt32(Console.ReadLine());
-        _bookShelter.DeleteBook(b => b.UniqueCode == inputInt, "код");
+        IBookSearchCondition condition = new BookByCode(inputInt);
+        _bookShelter.DeleteBook(condition);
         Console.WriteLine("Нажмите любую кнопку, чтобы вернуться в главное меню");
         Console.ReadKey();
         Console.Clear();
     }
 
-    private void FindBookByNameMenu()
+    private void FindBookByTitleMenu()
     {
         Console.Clear();
         Console.Write("Введите имя: ");
         string inputString = Console.ReadLine();
-        _bookShelter.ShowBook(b => b.Name == inputString, "имя");
+        IBookSearchCondition condition = new BookByTitle(inputString);
+        _bookShelter.ShowBook(condition);
         Console.WriteLine("Нажмите любую кнопку, чтобы вернуться в главное меню");
         Console.ReadKey();
         Console.Clear();
@@ -187,7 +192,8 @@ public class LibraryConsoleApp
         Console.Clear();
         Console.Write("Введите автора: ");
         string inputString = Console.ReadLine();
-        _bookShelter.ShowBook(b => b.Author == inputString, "автор");
+        IBookSearchCondition condition = new BookByAuthor(inputString);
+        _bookShelter.ShowBook(condition);
         Console.WriteLine("Нажмите любую кнопку, чтобы вернуться в главное меню");
         Console.ReadKey();
         Console.Clear();
@@ -198,7 +204,8 @@ public class LibraryConsoleApp
         Console.Clear();
         Console.Write("Введите год: ");
         int inputInt = Convert.ToInt32(Console.ReadLine());
-        _bookShelter.ShowBook(b => b.Year == inputInt, "год");
+        IBookSearchCondition condition = new BookByYear(inputInt);
+        _bookShelter.ShowBook(condition);
         Console.WriteLine("Нажмите любую кнопку, чтобы вернуться в главное меню");
         Console.ReadKey();
         Console.Clear();
@@ -209,7 +216,8 @@ public class LibraryConsoleApp
         Console.Clear();
         Console.Write("Введите код: ");
         int inputInt = Convert.ToInt32(Console.ReadLine());
-        _bookShelter.ShowBook(b => b.UniqueCode == inputInt, "код");
+        IBookSearchCondition condition = new BookByCode(inputInt);
+        _bookShelter.ShowBook(condition);
         Console.WriteLine("Нажмите любую кнопку, чтобы вернуться в главное меню");
         Console.ReadKey();
         Console.Clear();

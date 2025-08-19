@@ -14,12 +14,12 @@ public class BookShelter
         Show(_books);
     }
 
-    private List<Book> FindBook(Predicate<Book> condition)
+    private List<Book> FindBook(IBookSearchCondition condition)
     {
-        return _books.FindAll(condition);
+        return _books.FindAll(condition.Condition);
     }
 
-    public void ShowBook(Predicate<Book> condition, string criteria)
+    public void ShowBook(IBookSearchCondition condition)
     {
         List<Book> books = FindBook(condition);
         if (FindBook(condition).Count != 0)
@@ -28,7 +28,7 @@ public class BookShelter
         }
         else
         {
-            Console.WriteLine($"Ничего не найдено по условию - {criteria}");
+            Console.WriteLine($"Ничего не найдено по условию - {condition.ConditionDescription}");
         }
     }
 
@@ -36,16 +36,16 @@ public class BookShelter
     {
         Console.WriteLine($"\n** " + new string('-', 25) + " **");
         foreach (Book book in list)
-            Console.WriteLine($"Название - {book.Name},\tАвтор -  {book.Author},\t" +
+            Console.WriteLine($"Название - {book.Title},\tАвтор -  {book.Author},\t" +
                               $"Год -  {book.Year},\tКод - {book.UniqueCode}");
         Console.WriteLine($"\n** " + new string('-', 25) + " **");
     }
 
-    public void DeleteBook(Predicate<Book> condition, string conditionDescription)
+    public void DeleteBook(IBookSearchCondition condition)
     {
         if (FindBook(condition).Count != 0)
             foreach (Book book in FindBook(condition))
                 _books.Remove(book);
-        else Console.WriteLine($"Ничего не найдено по условию - {conditionDescription}");
+        else Console.WriteLine($"Ничего не найдено по условию - {condition.ConditionDescription}");
     }
 }
