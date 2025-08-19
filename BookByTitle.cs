@@ -8,7 +8,7 @@ public class BookByTitle : IBookSearchCondition
     {
         _title = title;
     }
-    
+
     public Predicate<Book> Condition => b => b.Title == _title;
     public string ConditionDescription => $"название - {_title}";
 }

@@ -8,7 +8,7 @@ public class BookByCode : IBookSearchCondition
     {
         _uniqueCode = uniqueCode;
     }
-    
+
     public Predicate<Book> Condition => b => b.UniqueCode == _uniqueCode;
     public string ConditionDescription => $"код - {_uniqueCode}";
 }

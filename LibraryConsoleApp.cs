@@ -3,11 +3,12 @@
 public class LibraryConsoleApp
 {
     private BookShelter _bookShelter;
-    
+
     public LibraryConsoleApp(BookShelter bookShelter)
     {
         _bookShelter = bookShelter;
     }
+
     public void Run()
     {
         bool IfContinue = true;
@@ -91,6 +92,7 @@ public class LibraryConsoleApp
                                 Console.Clear();
                                 break;
                         }
+
                         break;
                     case ConsoleKey.Spacebar:
                         IfContinue = false;

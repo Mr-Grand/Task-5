@@ -25,10 +25,7 @@ internal class Program
         bookShelter.AddBook(book7);
 
         LibraryConsoleApp libraryConsoleApp = new(bookShelter);
-        
+
         libraryConsoleApp.Run();
-        
-        
-        
     }
 }
